@@ -8,8 +8,9 @@ int main()
 {
     int num1,num2;
     float average;
-    scanf("%d,%d",&num1,&num2);/*´ø¶ººÅÊäÈë*/
+    scanf("%f%f",&num1,&num2);
     average=aver(num1,num2);
     printf("average=%2f\n",average);
     return 0;
 }
+
