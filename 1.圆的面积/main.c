@@ -1,11 +1,12 @@
 #include <stdio.h>
 #define PI 3.14159
-#define R 10
 
 int main()
 {
-    float area;
+    float area,R;
+    printf("输入圆的半径：");
+    scanf("%f",&R);
     area = PI * R * R;
-    printf("area is %.2f\n", area);
+    printf("圆的面积为：%.2f",area);
     return 0;
 }
