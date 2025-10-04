@@ -3,7 +3,7 @@
 int main()
 {
     float a,b,c,d;
-    printf("ÇëÊäÈëÈı¸öÊı×Ö£¨ÓÃ¶ººÅ¸ô¿ª£©");
+    printf("è¯·è¾“å…¥ä¸‰ä¸ªæ•°å­—ï¼ˆç”¨é€—å·éš”å¼€ï¼‰");
     scanf("%f,%f,%f",&a,&b,&c);
     if(b>a)
     {
@@ -17,7 +17,7 @@ int main()
     c=a;
     a=d;
     }
-    if(b>c)
+    if(c>b)
     {d=b;
     b=c;
     c=d ;
@@ -25,3 +25,4 @@ int main()
     printf("%f>%f>%f",a,b,c);
     return 0;
 }
+
