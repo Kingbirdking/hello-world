@@ -3,7 +3,7 @@ int main()
 {
     int i,a,sum=0;
     i=1;
-    printf("ÇëÊäÈë×î´óÖµ:");
+    printf("è¾“å…¥ç›¸åŠ ä¸­æœ€å¤§çš„é‚£ä¸ªæ•°:");
     scanf("%d",&a);
     while(i<=a)
     {
