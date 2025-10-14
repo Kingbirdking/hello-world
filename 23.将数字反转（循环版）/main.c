@@ -3,7 +3,7 @@
 int main()
 {
     int v,r;
-    printf("ÇëÊäÈëµ¹Ã¹µÄÊı×Ö:");
+    printf("è¯·è¾“å…¥å€’éœ‰çš„æ•°å­—:");
     scanf("%d",&v);
     if(v<0)
         printf("-");
