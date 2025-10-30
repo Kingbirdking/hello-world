@@ -1,0 +1,85 @@
+#include <stdio.h>
+int main()
+{
+    int i,j,k,f=0,p,t,v=99,s[v];
+    char c,d,e;
+    printf("请输入数据:\n");
+    for(i=0;scanf("%d",&s[i]);i++)
+        if(getchar()=='\n')
+        break;
+    printf("数据录入完毕,请选择排序方式(升序:1;降序:2)\n");
+    scanf("%c",&c);
+    if(c=='1')
+    {
+    printf("排序结果为:\n");
+    for(j=0;j<i;j++)
+    {
+        p=0;
+        for(k=1;k<=i-j;k++)
+            if(s[p]>s[k])
+                p=k;
+                t=s[p];
+                s[p]=s[i-j];
+                s[i-j]=t;
+    }
+    for(j=0;j<=i-1;j++)
+        printf("%d>",s[j]);
+        printf("%d\n",s[j]);
+}
+    else if(c=='2')
+    {
+    printf("排序结果为:\n");
+    for(j=0;j<i;j++)
+    {
+        p=0;
+        for(k=1;k<=i-j;k++)
+            if(s[p]<s[k])
+                p=k;
+                t=s[p];
+                s[p]=s[i-j];
+                s[i-j]=t;
+    }
+    for(j=0;j<=i-1;j++)
+        printf("%d<",s[j]);
+        printf("%d\n",s[j]);
+    }
+    printf("删除某一数据或结束?(Y/N)\n");
+    getchar();
+    scanf("%c",&d);
+    if((d=='Y')||(d=='y'))
+        do
+    {
+        printf("请输入要删除的数字:\n");
+        scanf("%d",&t);
+        for(j=0;j<=i-1;j++)
+            {
+                if(s[j]!=t)
+                    f=1;
+            }
+        if(f==1)
+    {
+        printf("剩余数据为:\n");
+        if(c=='1')
+        {
+        for(j=0;j<=i-1;j++)
+                if(s[j]!=t)
+                printf("%d>",s[j]);
+        }
+        else if(c=='2')
+        {
+           for(j=0;j<=i-1;j++)
+            if(s[j]!=t)
+             printf("%d<",s[j]);
+        }
+        if(s[j]!=t)
+                printf("%d\n",s[j]);
+    }
+    else
+    {
+    printf("未寻等此数!\n");
+    printf("继续删除或结束(Y/N)?\n");
+    scanf("%c",&e);
+    }
+    }while((e=='Y')||(e=='y'));
+    return 0;
+}
