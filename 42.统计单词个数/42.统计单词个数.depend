@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1761648354 source:d:\codeblocks\库\42.统计单词个数\main.c
+	<stdio.h>
+	<ctype.h>
+
