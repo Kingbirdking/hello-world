@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1762432202 source:d:\codeblocks\库\53.存储空间的动态分配\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
