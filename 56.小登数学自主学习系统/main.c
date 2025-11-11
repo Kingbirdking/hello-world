@@ -1,12 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+float jue(float x,float y)
+{
+    float jie;
+    if(x-y<0)
+        jie=y-x;
+    else
+        jie=x-y;
+    return jie;
+}
+
 int main() {
 int f=0,i;
 float an,en;
 char eh;
+puts("è‹¥é™¤ä¸å°½ï¼Œä¿ç•™å…­ä½å°æ•°ï¼");
 while(1)
-   {srand((unsigned int)time(NULL));
+   {
+    eh=' ';
+    srand((unsigned int)time(NULL));
     int a= rand()%2;
     int b= rand()%2;
     int m= rand()%1000;
@@ -28,22 +41,22 @@ while(1)
         c/=10;
     while(d/10==d)
         d/=10;
-        puts("Èô³ý²»¾¡£¬±£ÁôÁùÎ»Ð¡Êý£¡");
 switch(e){
     case 0:if(c<0&&d<0)printf("(%g)+(%g)=",c,d);else if(c<0&&d>0)printf("(%g)+%g=",c,d);else if(c>0&&d<0)printf("%g+(%g)=",c,d); else printf("%g+%g=",c,d);an=c+d;break;
     case 1:if(c<0&&d<0)printf("(%g)-(%g)=",c,d);else if(c<0&&d>0)printf("(%g)-%g=",c,d);else if(c>0&&d<0)printf("%g-(%g)=",c,d); else printf("%g-%g=",c,d);an=c-d;break;
-    case 2:if(c<0&&d<0)printf("(%g)¡Á(%g)=",c,d);else if(c<0&&d>0)printf("(%g)¡Á%g=",c,d);else if(c>0&&d<0)printf("%g¡Á(%g)=",c,d); else printf("%g¡Á%g=",c,d);an=c*d;break;
-    case 3:if(c<0&&d<0)printf("(%g)¡Â(%g)=",c,d);else if(c<0&&d>0)printf("(%g)¡Â%g=",c,d);else if(c>0&&d<0)printf("%g¡Â(%g)=",c,d); else printf("%g¡Â%g=",c,d);an=c/d;break;
+    case 2:if(c<0&&d<0)printf("(%g)Ã—(%g)=",c,d);else if(c<0&&d>0)printf("(%g)Ã—%g=",c,d);else if(c>0&&d<0)printf("%gÃ—(%g)=",c,d); else printf("%gÃ—%g=",c,d);an=c*d;break;
+    case 3:if(c<0&&d<0)printf("(%g)Ã·(%g)=",c,d);else if(c<0&&d>0)printf("(%g)Ã·%g=",c,d);else if(c>0&&d<0)printf("%gÃ·(%g)=",c,d); else printf("%gÃ·%g=",c,d);an=c/d;break;
 }
     scanf(" %f",&en);
-    if(en-an<0.001){
-    puts("¶Ô");
-    printf("µ±Ç°µÃ·ÖÎª%d\n",++f);}
-    else{
-    puts("´í");
-    printf("ÕýÈ·´ð°¸Îª%g\n",an);}
-    puts("ÊÇ·ñ¼ÌÐø(Y/N)£¿");
-    scanf(" %c",&eh);
+    if(jue(en,an)<0.001){
+            printf("%f\n",jue(en,an));
+    puts("å¯¹");
+    printf("å½“å‰å¾—åˆ†ä¸º%d\n",++f);}
+    else
+    puts("é”™");
+    printf("æ­£ç¡®ç­”æ¡ˆä¸º%g\n",an);
+    puts("æ˜¯å¦ç»§ç»­(Y/N)ï¼Ÿ");
+    scanf(" %s",&eh);
     if(eh=='n'||eh=='N')
     return 0;
 }
