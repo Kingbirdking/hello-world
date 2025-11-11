@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1762827704 source:d:\codeblocks\库\56.小登数学自主学习系统\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
